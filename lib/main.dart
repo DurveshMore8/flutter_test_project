@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_project/features/01/screens/input_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,14 +13,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('New App'),
-        ),
-        body: const Center(
-          child: Text('Hello World!'),
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          color: Colors.blue,
+          titleTextStyle: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
         ),
       ),
+      home: const InputScreen(),
     );
   }
 }
